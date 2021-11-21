@@ -25,7 +25,9 @@ export const Albums = () => {
     () => JSON.parse(localStorage.getItem("albumsList")) || initialState
   );
   const [inputValue, setInputValue] = useState("");
-  const [isGrid, setIsGrid] = useState(false);
+  const [isGrid, setIsGrid] = useState(
+    () => JSON.parse(localStorage.getItem("isGrid")) || false
+  );
 
   const { handleSort, sortedList, activeSortType, isReverseOrder } =
     useListSort({
@@ -38,7 +40,8 @@ export const Albums = () => {
 
   useEffect(() => {
     localStorage.setItem("albumsList", JSON.stringify(list));
-  }, [list]);
+    localStorage.setItem("isGrid", JSON.stringify(isGrid));
+  }, [list, isGrid]);
 
   const resetInputValue = () => {
     setInputValue("");

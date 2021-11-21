@@ -34,7 +34,6 @@ export const useListSort = ({ list }) => {
       setReverseOrder(true);
       return;
     }
-
     setActiveSortType(type);
   };
 
