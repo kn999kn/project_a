@@ -9,8 +9,9 @@ const LANGUAGES = {
 
 export const Languages = () => {
   const { i18n } = useTranslation();
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
   };
 
   return (
