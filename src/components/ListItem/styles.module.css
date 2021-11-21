@@ -1,0 +1,35 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #d0d0d0;
+  padding: 1rem;
+}
+.idBlock {
+  font-size: 10px;
+}
+
+.listView {
+  margin-bottom: .5rem;
+  border-radius: 5px;
+}
+
+.gridView {
+  flex-direction: column;
+  border-radius: 5px;
+}
+.name {
+  margin: 1rem 0;
+}
+
+.date {
+  margin: 1rem 0;
+}
+
+.listView .name {
+  flex-basis: 200px;
+}
+
+.listView .date {
+  flex-basis: 200px;
+}

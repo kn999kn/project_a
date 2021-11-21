@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project uses css modules to simplify the example. Here we can use different approaches for styling for example scss, styled components
 
 ## Available Scripts
 

@@ -1,0 +1,17 @@
+.listItem {
+  border: 1px solid #000;
+}
+.idBlock {
+  font-size: 10px;
+}
+
+.viewButton {
+  margin-left: 1rem;
+}
+
+.controlsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}

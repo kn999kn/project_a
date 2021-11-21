@@ -1,0 +1,12 @@
+export const LIST_ACTIONS = {
+  ADD_ITEM: "ADD_ITEM",
+  REMOVE_ITEM: "REMOVE_ITEM",
+  ADD_FAVORITE_MARK: "ADD_FAVORITE_MARK",
+  REMOVE_FAVORITE_MARK: "REMOVE_FAVORITE_MARK",
+};
+
+export const SORT_FIELDS = {
+  ID: "id",
+  NAME: "name",
+  DATE: "date",
+};
