@@ -1,7 +1,8 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import { Tooltip } from "@mui/material";
 import styles from "./styles.module.css";
 import dayjs from "dayjs";
+
 
 export const ListItem = ({
   name,
@@ -17,7 +18,9 @@ export const ListItem = ({
       <span className={styles.name}>{name}</span>
       <span className={styles.date}>{date}</span>
       {children}
-      <span className={styles.idBlock}>id: {id}</span>
+      <Tooltip title={id} placement="top">
+        <span className={styles.idBlock}>id: {id}</span>
+      </Tooltip>
     </div>
   );
 };

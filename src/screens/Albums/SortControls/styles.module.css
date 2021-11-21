@@ -2,5 +2,5 @@
   display: flex;
   min-width: 480px;
   justify-content: space-between;
-  
+  gap: 1rem;
 }

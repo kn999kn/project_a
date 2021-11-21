@@ -2,6 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./styles.module.css";
 
+const LANGUAGES = {
+  EN: "en",
+  UA: "ua",
+};
+
 export const Languages = () => {
   const { i18n } = useTranslation();
   const changeLanguage = (lng) => {
@@ -12,17 +17,17 @@ export const Languages = () => {
     <div className={styles.wrapper}>
       <div
         className={`${styles.langItem} ${
-          i18n.language === "en" ? styles.activeLang : ""
+          i18n.language === LANGUAGES.EN ? styles.activeLang : ""
         }`}
-        onClick={() => changeLanguage("en")}
+        onClick={() => changeLanguage(LANGUAGES.EN)}
       >
         EN
       </div>
       <div
         className={`${styles.langItem} ${
-          i18n.language === "ua" ? styles.activeLang : ""
+          i18n.language === LANGUAGES.UA ? styles.activeLang : ""
         }`}
-        onClick={() => changeLanguage("ua")}
+        onClick={() => changeLanguage(LANGUAGES.UA)}
       >
         UA
       </div>
