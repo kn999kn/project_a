@@ -78,14 +78,12 @@ export const Albums = () => {
 
   return (
     <div>
-      <div>
-        <Languages />
-        <Form
-          inputValue={inputValue}
-          onInputChange={handleInputChange}
-          onSubmit={addItem}
-        />
-      </div>
+      <Languages />
+      <Form
+        inputValue={inputValue}
+        onInputChange={handleInputChange}
+        onSubmit={addItem}
+      />
       <div className={styles.controlsWrapper}>
         <SortControls
           activeSortType={activeSortType}
