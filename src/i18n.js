@@ -12,6 +12,8 @@ const resources = {
       "Sort by id": "Sort by id",
       "Type album title": "Type album title",
       "Add to List": "Add to List",
+      "Set as best of the best": "Set as best of the best",
+      "Unset best of the best": "Unset as best of the best",
     },
   },
   ua: {
@@ -21,6 +23,8 @@ const resources = {
       "Sort by id": "Сортувати по id",
       "Type album title": "Додаті назву альбому",
       "Add to List": "Додати альбом",
+      "Set as best of the best": "Помітити як кращій з найкращих",
+      "Unset best of the best": "Прибрати кращій з найкращих",
     },
   },
 };

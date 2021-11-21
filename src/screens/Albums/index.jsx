@@ -5,6 +5,8 @@ import GridViewIcon from "@mui/icons-material/GridView";
 import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
 import StarIcon from "@mui/icons-material/Star";
 import CloseIcon from "@mui/icons-material/Close";
+import { Tooltip } from "@mui/material";
+import { useTranslation } from "react-i18next";
 import { List } from "../../components/List";
 import { ListItem } from "../../components/ListItem";
 import { Languages } from "./Languages";
@@ -28,6 +30,8 @@ export const Albums = () => {
   const [isGrid, setIsGrid] = useState(
     () => JSON.parse(localStorage.getItem("isGrid")) || false
   );
+
+  const { t } = useTranslation();
 
   const { handleSort, sortedList, activeSortType, isReverseOrder } =
     useListSort({
@@ -112,24 +116,34 @@ export const Albums = () => {
             date={date}
           >
             {isFavorite ? (
-              <IconButton
-                color="primary"
-                component="span"
-                onClick={() => removeFavoriteMark(id)}
+              <Tooltip
+                title={`${t("Unset best of the best")} `}
+                placement="top"
               >
-                <StarIcon />
-              </IconButton>
+                <IconButton
+                  color="warning"
+                  component="span"
+                  onClick={() => removeFavoriteMark(id)}
+                >
+                  <StarIcon />
+                </IconButton>
+              </Tooltip>
             ) : (
-              <IconButton
-                color="primary"
-                component="span"
-                onClick={() => addFavoriteMark(id)}
+              <Tooltip
+                title={`${t("Set as best of the best")} `}
+                placement="top"
               >
-                <StarBorderIcon />
-              </IconButton>
+                <IconButton
+                  color="warning"
+                  component="span"
+                  onClick={() => addFavoriteMark(id)}
+                >
+                  <StarBorderIcon />
+                </IconButton>
+              </Tooltip>
             )}
             <IconButton
-              color="primary"
+              color="error"
               component="span"
               onClick={() => removeItem(id)}
             >
